@@ -1,2 +1,15 @@
 server:
   port: 9000
+
+spring:
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers:
+            - localhost:9092
+      function:
+        definition: producer
+      bindings:
+        producer-out-0:
+          destination: test-topic
