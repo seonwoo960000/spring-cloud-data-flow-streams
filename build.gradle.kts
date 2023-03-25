@@ -30,11 +30,10 @@ subprojects {
     dependencies {
         implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
         implementation("org.jetbrains.kotlin:kotlin-reflect")
-        testImplementation("org.springframework.boot:spring-boot-starter-test")
-
-//        implementation("org.springframework.boot:spring-boot-starter-data-jpa")
         implementation("org.springframework.boot:spring-boot-starter-web")
         implementation("org.springframework.boot:spring-boot-starter-actuator")
+
+        testImplementation("org.springframework.boot:spring-boot-starter-test")
     }
 
     dependencyManagement {
@@ -79,76 +78,3 @@ subprojects {
         }
     }
 }
-
-project(":module1") {
-    dependencies {
-
-    }
-}
-//project(":api") {
-//    dependencies {
-//        api(project(":common-lib"))
-//        implementation(project(":application"))
-//        runtimeOnly(project(":infrastructure"))
-//
-//        testImplementation(project(":application"))
-//        testImplementation(project(":domain"))
-//        testImplementation(project(":infrastructure"))
-//    }
-//}
-
-//project(":application") {
-//    dependencies {
-//        api(project(":common-lib"))
-//        implementation(project(":domain"))
-//    }
-//}
-//
-//project(":infrastructure") {
-//    dependencies {
-//        implementation(project(":domain"))
-//        implementation(project(":application"))
-//        api(project(":common-lib"))
-//
-//        testImplementation(project(":domain"))
-//        testImplementation(project(":application"))
-//    }
-//}
-
-//project(":domain") {
-//    dependencies {
-//        api(project(":common-lib"))
-//    }
-//}
-//
-//project(":domain") {
-//    val jar: Jar by tasks
-//    val bootJar: BootJar by tasks
-//
-//    bootJar.enabled = false
-//    jar.enabled = true
-//}
-//
-//project(":common-lib") {
-//    val jar: Jar by tasks
-//    val bootJar: BootJar by tasks
-//
-//    bootJar.enabled = false
-//    jar.enabled = true
-//}
-//
-//project(":application") {
-//    val jar: Jar by tasks
-//    val bootJar: BootJar by tasks
-//
-//    bootJar.enabled = false
-//    jar.enabled = true
-//}
-//
-//project(":infrastructure") {
-//    val jar: Jar by tasks
-//    val bootJar: BootJar by tasks
-//
-//    bootJar.enabled = false
-//    jar.enabled = true
-//}

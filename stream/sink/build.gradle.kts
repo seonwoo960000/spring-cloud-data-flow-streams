@@ -1,4 +1,5 @@
 dependencies {
+    api(project(":common"))
     implementation(project(mapOf("path" to ":stream:source")))
 }
 

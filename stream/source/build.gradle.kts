@@ -1,4 +1,5 @@
 dependencies {
+    api(project(":common"))
 }
 
 // Throws an error if not specified
